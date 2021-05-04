@@ -1,0 +1,14 @@
+#!/bin/bash
+nvidia-smi | awk 'NR>1 {print}'
+echo
+lscpu | awk 'FNR == 13 {print $0}'
+lscpu | awk 'FNR == 15 {print $0}'
+echo
+echo "Used RAM:" $(free -h --si | awk 'FNR == 2 {print $3}')
+echo "Cached RAM:" $(free -h --si | awk 'FNR == 2 {print $6}')
+echo "Free RAM:" $(free -h --si | awk 'FNR == 2 {print $4}')
+echo "Total RAM:" $(free -h --si | awk 'FNR == 2 {print $2}')
+echo
+echo "Used Disk:" $(df -h / | awk 'FNR == 2 {print $3}')
+echo "Free Disk:" $(df -h / | awk 'FNR == 2 {print $4}')
+echo "Total Disk:" $(df -h / | awk 'FNR == 2 {print $2}')
