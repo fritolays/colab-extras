@@ -4,14 +4,9 @@ echo "Power Usage:" $(nvidia-smi -a | awk 'FNR == 155 {$1=$2=$3=""; print $0}')
 echo "Power Max:" $(nvidia-smi -a | awk 'FNR == 156 {$1=$2=$3=""; print $0}')
 
 echo
-echo "VRAM Used:" $(nvidia-smi -a | awk 'FNR == 78 {$1=$2=""; print $0}')
-echo "VRAM Free:" $(nvidia-smi -a | awk 'FNR == 79 {$1=$2=""; print $0}')
-echo "VRAM Total:" $(nvidia-smi -a | awk 'FNR == 77 {$1=$2=""; print $0}')
-
-echo
-echo "BAR Used:" $(nvidia-smi -a | awk 'FNR == 82 {$1=$2=""; print $0}')
-echo "BAR Free:" $(nvidia-smi -a | awk 'FNR == 83 {$1=$2=""; print $0}')
-echo "BAR Total:" $(nvidia-smi -a | awk 'FNR == 81 {$1=$2=""; print $0}')
+echo "Memory Used:" $(nvidia-smi -a | awk 'FNR == 78 {$1=$2=""; print $0}')
+echo "Memory Free:" $(nvidia-smi -a | awk 'FNR == 79 {$1=$2=""; print $0}')
+echo "Memory Total:" $(nvidia-smi -a | awk 'FNR == 77 {$1=$2=""; print $0}')
 
 echo
 echo "GPU:" $(nvidia-smi -a | awk 'FNR == 86 {$1=$2=""; print $0}')
