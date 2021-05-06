@@ -62,7 +62,7 @@ waifu2x_ncnn_vulkan:
   t: 448 # tile-size: tile size (>=32, default=400)
   m: null # model-path: waifu2x model path (default=models-cunet)
   g: 0 # gpu-id: gpu device to use (default=0)
-  j: '4:4:4' # thread count for load/proc/save (default=1:2:2) can be 1:2,2,2:2 for multi-gpu
+  j: '1:2:2' # thread count for load/proc/save (default=1:2:2) can be 1:2,2,2:2 for multi-gpu
   x: false # enable tta mode
   #f: png # output image format (jpg/png/webp, default=ext/png)
 srmd_ncnn_vulkan:
