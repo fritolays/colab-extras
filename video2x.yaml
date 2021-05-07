@@ -58,7 +58,7 @@ waifu2x_ncnn_vulkan:
   #i: null # input-path: input image path (jpg/png/webp) or directory
   #o: null # output-path: output image path (jpg/png/webp) or directory
   'n': 2 # noise-level: denoise level (-1/0/1/2/3, default=0)
-  s: 4 # scale: upscale ratio (1/2, default=2)
+  s: 2 # scale: upscale ratio (1/2, default=2)
   t: 512 # tile-size: tile size (>=32, default=400)
   m: null # model-path: waifu2x model path (default=models-cunet)
   g: 0 # gpu-id: gpu device to use (default=0)
